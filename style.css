@@ -1,0 +1,181 @@
+:root {
+    --primary:#1565c0;
+    --light:#e3f2fd;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial;
+    background: linear-gradient(135deg, #e3f2fd, #bbdefb);
+    text-align: center;
+    padding: 15px;
+    margin: 0;
+}
+
+/* Container */
+.container {
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    width: 95%;
+    max-width: 900px;
+    margin: auto;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+}
+
+h2 {
+    color: var(--primary);
+    font-size: 24px;
+}
+
+/* Boxes */
+.box {
+    margin: 12px 0;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Input with ₹ */
+.input-wrapper {
+    position: relative;
+    display: inline-block;
+    width: 100%;
+    max-width: 300px;
+}
+
+.rupee {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-weight: bold;
+}
+
+input {
+    width: 100%;
+    padding-left: 35px;
+    height: 45px;
+    font-size: 20px;
+    border: none;
+    background: #f5f5f5;
+    outline: none;
+    border-radius: 6px;
+}
+
+/* Remove arrows */
+input::-webkit-inner-spin-button {
+    display: none;
+}
+
+/* Dropdown */
+select {
+    padding: 8px;
+    font-size: 14px;
+    width: 100%;
+    max-width: 250px;
+    border-radius: 6px;
+}
+
+/* Table Wrapper for mobile scroll */
+#emiList {
+    overflow-x: auto;
+}
+
+/* Table */
+table {
+    margin: 20px auto;
+    border-collapse: collapse;
+    width: 100%;
+    min-width: 600px; /* important for scroll */
+}
+
+td {
+    border: 1px solid #ccc;
+    padding: 12px;
+    line-height: 1.6;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+/* Hover only on desktop */
+@media (hover: hover) {
+    td:hover span {
+        display: inline-block;
+        transform: scale(1.2);
+    }
+}
+
+/* Button */
+.btn {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background: var(--primary);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    width: 100%;
+    max-width: 300px;
+    font-size: 16px;
+}
+
+/* Hide button in PDF */
+@media print {
+    .btn {
+        display: none;
+    }
+}
+
+/* 🔥 Responsive Breakpoints */
+
+/* Tablets */
+@media (max-width: 768px) {
+    h2 {
+        font-size: 22px;
+    }
+
+    .box {
+        font-size: 15px;
+    }
+
+    input {
+        font-size: 18px;
+    }
+}
+
+/* Phones */
+@media (max-width: 480px) {
+    body {
+        padding: 10px;
+    }
+
+    .container {
+        padding: 15px;
+    }
+
+    h2 {
+        font-size: 20px;
+    }
+
+    .box {
+        font-size: 14px;
+    }
+
+    input {
+        height: 40px;
+        font-size: 16px;
+    }
+
+    td {
+        font-size: 12px;
+        padding: 10px;
+    }
+
+    .btn {
+        font-size: 14px;
+        padding: 10px;
+    }
+}

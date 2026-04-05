@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fee EMI Calculator</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h2>Fee EMI Calculator</h2>
+
+    <div class="box">
+        Total Course Fee =
+        <div class="input-wrapper">
+            <span class="rupee">₹</span>
+            <input type="number" id="fee" onkeypress="handleEnter(event)">
+        </div>
+    </div>
+
+    <div class="box">Scheme: <b>15/3</b></div>
+
+    <div class="box">
+        Select Due Date =
+        <select id="dueDate">
+            <option value="5th">5th of every month</option>
+            <option value="10th">10th of every month</option>
+        </select>
+    </div>
+
+    <div class="box" id="downPayment"></div>
+    <div class="box" id="emiTitle"></div>
+
+    <div id="emiList"></div>
+
+    <button onclick="downloadPDF()" class="btn">
+        Download PDF (A4)
+    </button>
+
+</div>
+
+<!-- Link JS -->
+<script src="script.js"></script>
+
+<!-- PDF Library -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.1/html2pdf.bundle.min.js"></script>
+
+</body>
+</html>
