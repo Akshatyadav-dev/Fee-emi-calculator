@@ -83,12 +83,6 @@ git clone https://github.com/Akshatyadav-dev/fee-emi-calculator.git
 
 ---
 
-## 👨‍💻 Author
-
-**Akshat Yadav**
-
----
-
 ## ⭐ Support
 
 If you like this project:
